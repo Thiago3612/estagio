@@ -1,0 +1,43 @@
+create database clientebanco
+
+use clientebanco
+
+
+create table correntista(
+
+conta varchar(5) NOT NULL,
+
+senha varchar(4) NOT NULL,
+
+nome varchar(40) NOT NULL,
+
+perfil varchar(6) NOT NULL,
+
+saldo real NOT NULL,
+
+ PRIMARY KEY(conta)
+
+);
+
+create table transacao(
+
+id integer NOT NULL AUTO_INCREMENT,
+
+conta varchar(5) NOT NULL,
+
+data date NOT NULL,
+
+valor real NOT NULL,
+
+tipo varchar(10) NOT NULL,
+
+ PRIMARY KEY(id),
+
+ FOREIGN KEY(conta) REFERENCES correntista (conta)
+
+);
+
+INSERT INTO correntista (conta, senha, nome, perfil, saldo) VALUES ('23245', '1234', 'Pedro Cardoso', 'Normal', 500);
+
+INSERT INTO correntista (conta, senha, nome, perfil, saldo) VALUES ('13617', '5678', 'Luana Lopes', 'Vip', 800);
+
