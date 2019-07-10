@@ -8,7 +8,7 @@ public class Conexao {
     private String driver = "com.mysql.jdbc.Driver";
     private String URL = "jdbc:mysql://localhost:3306/clientebanco";
     private String USER = "root";
-    private String SENHA = "06950200";
+    private String SENHA = "root";
     private Connection conn;
  
     public Conexao() throws SQLException, ClassNotFoundException {
